@@ -22,16 +22,23 @@ output_file_name = sys.argv[3] #Input 3: Output File Name
 
 # Read data as a single string
 with open(file_path, "r") as file:
-    file_content = file.read().strip()  # remove any spaceing between lines
-
+    file_content = file.read().replace("\n", "").strip()  # remove any spaceing between lines
+print(file_content)
 # Run the function and print results
 #print(predicted_genome(file_content, k))
 
  #OUTPUT of the Function
 output = predicted_genome(file_content, k) 
+print(output)
+
 #Export New Text File
 with open(output_file_name, "w") as out_file: #Open a Text File
-    for key, value in output.items():
+   for key, value in output.items():
         out_file.write("{}: {}\n".format(key, value)) #Format for the new File
 
 print("Output saved to {}".format(output_file_name))  #Print Conformation for File Output
+
+
+
+ 
+
