@@ -19,9 +19,10 @@ def test_read_genome_files():                                                   
     This Function Test two scenarios where the data is in a file format. 
     The first found in "exam4_example1.txt" has data on a single line.
     The second found in "exam4_textdata2" had data on mutiple Lines.
+    The third found in "exam4_textdata3" had a white space added in middle of the line of data.
     
     The expected strings are used to check to ensure the outcomes of the function are the expected results. 
-    The Expected outcomes are seen as variables exp_file_1 and exp_file_2. 
+    The Expected outcomes are seen as variables exp_file_1, exp_file_2, and exp_file_3. 
     """
     #Expected Result From First DataFile
     exp_file_1 = "ATGTCTGTCTGAA" 
