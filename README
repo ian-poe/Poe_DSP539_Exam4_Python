@@ -1,6 +1,6 @@
 This Exam used Python 3.6.8, pytest-5.4.1
 
-This folder contains seven items including test data sets, function "predict_genomes", a testing function to check the accuracy of the function, the output files for reads.fa for both k-mer length of 2 and 3, and finally a document containing a result overview.
+This folder contains eight items including test data sets, function "predict_genomes", a testing function to check the accuracy of the function, the output files for reads.fa for both k-mer length of 2 and 3, and finally a document containing a result overview.
   
 The following will go through each of these seven items to make the understanding and running the exam easier.
 
@@ -33,6 +33,9 @@ exam4_example1.txt:
 
 exam4_textdata2:
   Example data created to check that multiple line of data is read correctly in the program
+
+exam4_textdata3:
+  Example data created to check that the addition of a space in the line of data
 
 Exam4_reads_k2_output.txt:
   This file contains the results of the reads.fa file from class using a k-mer length of 2. It shows 16 rows of data each 
