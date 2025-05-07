@@ -31,7 +31,7 @@ def test_read_genome_files():                                                   
     exp_file_3 = "ATGTCTGTCTGAA" 
     assert read_genome_file("exam4_example1.txt") == exp_file_1 # Test to See if Results For File 1 is the Same
     assert read_genome_file("exam4_textdata2") == exp_file_2    # Test to See if Results For File 2 is the Same
-    assert read_genome_file("exam4_textdata3") == exp_file_3
+    assert read_genome_file("exam4_textdata3") == exp_file_3 #Test to See if Blank Removed From Middle of Line
     
 def test_identify_genomes():                                    #Test to Check Function identify_genomes()
     """
