@@ -14,7 +14,7 @@ def read_genome_file(file_path):                                                
         The genome sequence as a single continuous string.
     """
     with open(file_path, "r") as file:                                                         #Opens File in Read Mode
-        return file.read().replace("\n", "").strip()                                           #Reads File and Removes newlines any extra spaces
+        return file.read().replace("\n", "").replace(" ", "").strip()                                           #Reads File and Removes newlines any extra spaces
 
 def identify_genomes(s, k):                                                                    #Function to Idenfity the List of Genome Substrings of Length k
     """
