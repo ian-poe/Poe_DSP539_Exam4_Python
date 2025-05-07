@@ -1,0 +1,53 @@
+This Exam used Python 3.6.8, pytest-5.4.1
+
+This folder contains seven items including test data sets, function "predict_genomes", a testing function to check the accracy of the function, the output files for reads.fa for both k-mer legth of 2 and 3, and finnaly a document containing a result overview.
+  
+The following will go through each of these seven items to make the understanding and running the exam easier.
+
+Objective of Exam4: Write a python script that, when run using the command line, gets information about each k-mer and its subsequent k-mers in a file of sequence fragments.
+
+predict_genome.py: 
+    To run this programe in command line type the following: "predict_genome.py path_to_data k output_file_name"
+    This code uses three inputs from the command line the first is the path where your data being evaluated is stored, the        second is the k-mer length, and the third is the output file name. This code uses multiple simple functions in order to 
+    obtain the final results. Once The data is done running a output conformation will be printed on the screen reminding you 
+    where you saved the results too. There are seven function and a main function which controles all of them once the 
+    variables are specified in the command window. To See a detailed discription of what each of these functions do please go 
+    into the file "predict_genome.py" and read the comments and docstrings for each of the functions. A data file is 
+    outputted with each unique k-mer and its frequency along with the next k-mers which follows it and there frequency. The 
+    data structure can be seen discribed in "Exam4_Results_Overview.md" and look like "AA : 985162: {'AA': 245686, 'AC': 
+    245841, 'AT': 245873, 'AG': 247762}" when k = 2.
+
+exam4_test.py:
+  To run the test code to check the outputs obtained from "predicted_genome.py" the pytest library is used. By Obtaining the 
+  correct results for a veriety of string and values for k we are able to check the function for edge values and check to 
+  ensure that the count is accurate and the functions are preforming how they are expected to. These the test used to check 
+  the functions can be seen with an indepth description in the code. In the command line this is run using the command 
+  "pytest exam4_test.py". Six diffrent test are preformed with multiple comparisons in each test and all of the test pass 
+  showing the function does what is expected. In addition two test datasets are included in this folder used to test the 
+  function to import the data of intrenst to ensure that no spaces are linebreakes are included in the string. 
+  "exam4_example1.txt" is a dingle line of data to ensure a signle line is read correctly then "exam4_textdata2" contains 
+  data on multiple line to test that a single string with no spaces are obtained.  
+
+exam4_example1.txt:
+  Example data created to check that one line of data is read correctly by the function
+
+exam4_textdata2:
+  Example data created to check that multiple line of data is read correctly in the program
+
+Exam4_reads_k2_output.txt:
+  This file contains the results of the reads.fa file from class using a k-mer length of 2. It shows 16 rows of data each 
+  having its own unique k-mer. This value is followed by the total frequency and then by the next k-mer and there respective 
+  frequencys. Each dataline lookes like this: (AA : 985162: {'AA': 245686, 'AC': 245841, 'AT': 245873, 'AG': 247762}).
+
+Exam4_reads_k3_output.txt:
+  This file contains the results of the reads.fa file from class using a k-mer length of 3. It shows 64 rows of data each 
+  having its own unique k-mer. This value is followed by the total frequency and then by the next k-mer and there respective 
+  frequencys. Each dataline lookes like this: (CTT : 246334: {'TTC': 61664, 'TTA': 61520, 'TTG': 61430, 'TTT': 61720}).
+
+Exam4_Results_Overview:
+  This document breifly talkes about the structure of the outputted data, how the program addresses edge cases at the 
+  begining and the end of the list, and how the program ensure that the data is not overcounting or being affected ay missing 
+  data formatting of the original data.
+
+**For a more indepth explination of the code please reade the comments and the docstring in the code itself**
+**FOr a detailed explination of output data structure and testing edge cases and counting of the program read the Result Overview**
